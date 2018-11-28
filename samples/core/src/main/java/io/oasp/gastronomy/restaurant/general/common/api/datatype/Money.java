@@ -77,7 +77,14 @@ public class Money extends AbstractSimpleDatatype<BigDecimal> implements Compara
 
     return new Money(getValue().add(money.getValue()));
   }
-
+  
+  public Money subtract(Money money) {
+    if(getValue().compareTo(money.getValue()) == -1) {
+        throw new IllegalArgumentException("Cannot subtract those money values");
+    }
+    return new Money(getValue().subtract(money.getValue()));
+  }
+  
   @Override
   public String toString() {
 
