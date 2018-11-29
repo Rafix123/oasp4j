@@ -22,6 +22,8 @@ public class UserDetailsClientTo extends AbstractTo implements UserProfile {
   private String lastName;
 
   private Role role;
+  
+  private String password;
 
   /**
    * The constructor.
@@ -60,6 +62,12 @@ public class UserDetailsClientTo extends AbstractTo implements UserProfile {
 
     return this.role;
   }
+  
+  @Override
+  public String getPassword() {
+
+    return this.password;
+  }
 
   /**
    * Sets the ID.
@@ -69,6 +77,15 @@ public class UserDetailsClientTo extends AbstractTo implements UserProfile {
   public void setId(Long id) {
 
     this.id = id;
+  }
+  
+
+  /**
+   * @param password new value of {@link #getpassword}.
+   */
+  public void setPassword(String password) {
+  
+    this.password = password;
   }
 
   /**
